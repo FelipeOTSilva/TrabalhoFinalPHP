@@ -1,0 +1,107 @@
+@import url(http://fonts.googleapis.com/css?family=PT+Sans);
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'PT Sans', Arial, Verdana;
+  background-color: #eee;
+}
+h1 {
+  text-align: center;
+  font-size: 48px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #222;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 120px;
+  margin: auto;
+  position: relative;
+  background-color: #1B1E24;
+  z-index: 7;
+}
+.menu li {
+  float: left;
+  width: 14.285%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.menu a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  font-size: 18px;
+  z-index: 9;
+}
+/*a.active {
+  background-color: #16a085;
+  pointer-events: none;
+}*/
+li.slider {
+  width: 14.285%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  /*background-color: #16a085;*/
+  z-index: 8;
+  transition: left 0.4s, background-color 0.4s;
+}
+.menu li:nth-child(1):hover ~ .slider,
+.menu li:nth-child(1):focus ~ .slider,
+.menu li:nth-child(1):active ~ .slider {
+  left: 0;
+  background-color: #16a085;
+}
+.menu li:nth-child(2):hover ~ .slider,
+.menu li:nth-child(2):focus ~ .slider,
+.menu li:nth-child(2):active ~ .slider {
+  left: 14.285%;
+  background-color: #16a085;
+}
+.menu li:nth-child(3):hover ~ .slider,
+.menu li:nth-child(3):focus ~ .slider,
+.menu li:nth-child(3):active ~ .slider {
+  left: 28.57%;
+  background-color: #16a085;
+}
+.menu li:nth-child(4):hover ~ .slider,
+.menu li:nth-child(4):focus ~ .slider,
+.menu li:nth-child(4):active ~ .slider {
+  left: 42.885%;
+  background-color: #16a085;
+}
+
+.menu li:nth-child(5):hover ~ .slider,
+.menu li:nth-child(5):focus ~ .slider,
+.menu li:nth-child(5):active ~ .slider {
+  left: 57.14%;
+  background-color: #16a085;
+}
+.menu li:nth-child(6):hover ~ .slider,
+.menu li:nth-child(6):focus ~ .slider,
+.menu li:nth-child(6):active ~ .slider {
+  left: 71.425%;
+  background-color: #16a085;
+}
+.menu li:nth-child(7):hover ~ .slider,
+.menu li:nth-child(7):focus ~ .slider,
+.menu li:nth-child(7):active ~ .slider {
+  left: 85.71%;
+  background-color: #16a085;
+}
