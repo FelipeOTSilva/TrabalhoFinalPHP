@@ -117,6 +117,10 @@
                                   <a href="pesquisaproduto.php">Produtos</a>
                                 </li> 
                                 <li>
+                                 <li>
+                                  <a href="pesquisatransportadora.php">Transportadora</a>
+                                </li> 
+                                <li>
                                   <a href="pesquisaentrada.php">Entrada de Estoque</a>
                                 </li> 
                                 <li>

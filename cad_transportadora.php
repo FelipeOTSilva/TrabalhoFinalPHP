@@ -43,8 +43,8 @@
 		<input type="text" name="cep" required><br>
 		<br>
 
-        <label class="col-md-4 control-label">Cidade</label>   
-        <select class="form-control" name="cidade" required>
+        <label>Cidade</label>   
+        <select name="cidade" required>
         <option>Selecione uma cidade...</option>
     <?php
         while ($query = mysql_fetch_array($sql))
@@ -55,7 +55,10 @@
     <?php
     }
     ?>
-    </select>       
+    </select>  
+    <br>
+    <br>
+        
        
 
     <label>Contato </label><br>
