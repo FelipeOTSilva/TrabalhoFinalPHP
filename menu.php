@@ -120,6 +120,9 @@
                                  <li>
                                   <a href="pesquisatransportadora.php">Transportadora</a>
                                 </li> 
+                                 <li>
+                                  <a href="pesquisausuario.php">Usuarios</a>
+                                </li> 
                                 <li>
                                   <a href="pesquisaentrada.php">Entrada de Estoque</a>
                                 </li> 
@@ -134,7 +137,7 @@
                             <ul class="nav nav-second-level">
                                 
                                   <li>
-                                   <a href="cad_entrada.php">Produtos</a>
+                                   <a href="entrada.php">Produtos</a>
                                 </li>
 
                             </ul>

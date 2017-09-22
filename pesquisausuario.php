@@ -91,7 +91,7 @@ $situacao='disabled';
                         <div class="panel-heading">
                         <center>
                         <h4>
-                           Transportadoras Cadastradas no Sistema
+                           Usúarios Cadastrados no Sistema
                             </h4>
                             </center>
                         </div>
@@ -106,16 +106,10 @@ $situacao='disabled';
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                    
-                                             <th>Nome</th>                                 
-                                             <th>Endereço</th>
-                                             <th>Número</th>
-                                             <th>Bairro</th>
-                                             <th>CEP</th>
-                                             <th>Cidade</th>
-                                             <th>Contato</th>
-                                             <th>CNPJ</th>
-                                             <th>Inscrição</th>
-                                             <th>Telefone</th>
+                                             <th>Nome</th>                                    
+                                            <th>Login</th>
+                                             <th>Senha</th>
+                                             <th>Nivel</th>                                            
                                              <th>Opção</th>
                                              
                                            
@@ -123,48 +117,24 @@ $situacao='disabled';
                                     </thead>
                                     <tbody>
                                     <?php
-                                      	$sql = "select transportadora.idTransportadora,
-                                                       transportadora.transportadora,
-                                                       transportadora.endereco,
-                                                       transportadora.num,
-                                                       transportadora.bairro,
-                                                       transportadora.cep,
-                                                       cidade.cidade,
-                                                       transportadora.contato,
-                                                       transportadora.cnpj,
-                                                       transportadora.insc,
-                                                       transportadora.tel
-                                                  from transportadora
-                                                  join cidade on (cidade.idCidade = transportadora.idCidade)";
+                                      	$sql = "select * from usuario";
 	
 	 $editar = mysql_query($sql);
      while ($l = mysql_fetch_array($editar)){	
-   $codigo = $l['idTransportadora'];  
-	$nome = $l['transportadora'];
-    $endereco = $l['endereco'];
-    $numero = $l['num'];
-    $bairro = $l['bairro'];
-    $cep = $l['cep'];
-    $cidade = $l['cidade'];
-    $contato = $l['contato'];
-    $cnpj = $l['cnpj'];
-    $inscricao = $l['insc'];
-    $telefone = $l['tel'];
+   $codigo = $l['idUsuario'];  
+	$nome = $l['nome'];
+	$login = $l['login'];
+	$senha= $l['senha'];
+	$nivel = $l['nivel'];
 	echo "
       
       <tr class=success>
-      <td> $nome </td>
-      <td> $endereco </td>
-      <td> $numero </td>
-      <td> $bairro </td>
-      <td> $cep </td>
-      <td> $cidade </td>
-      <td> $contato </td>
-      <td> $cnpj </td>      
-      <td> $inscricao </td>
-      <td> $telefone </td>
-    <center>  
-    <td align=center> <a href=editatransportadora.php?codigo=$codigo data-toggle=modal data-target=#myModal>
+      <td> $nome </td> 
+     <td align=right> $login</td>
+     <td align=right> $senha</td> 
+      <td align=right>$nivel </td>
+      <center>  
+    <td align=center> <a href=editausuario.php?codigo=$codigo data-toggle=modal data-target=#myModal>
       <button type='button' class='btn btn-primary btn-xs' $situacao>Visualizar Cadastro</button> </td>  
  </a> 
                               
@@ -212,7 +182,7 @@ $situacao='disabled';
     <script>
     $(document).ready(function() {
         $('#dataTables-example').DataTable({
-                responsive: false
+                responsive: true
         });
     });
     </script>

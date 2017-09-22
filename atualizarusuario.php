@@ -8,7 +8,7 @@ $senha=$_POST["senha"];
 $nivel=strtoupper($_POST["nivel"]);
 
 
-$update= mysql_query("update usuario set cod_usuario='$codigo',nome='$nome',login='$login',senha='$senha',nivel='$nivel' where cod_usuario='$codigo'") or die ("ERRO");
+$update= mysql_query("update usuario set idUsuario ='$codigo',nome='$nome',login='$login',senha='$senha',nivel='$nivel' where idUsuario='$codigo'") or die ("ERRO");
 if ($update != ''){
 echo "<script>alert('Usuario  Atualizado com Sucesso');</script>";
 echo "<script>window.location ='pesquisausuario.php';</script>"; 

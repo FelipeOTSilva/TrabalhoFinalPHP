@@ -21,7 +21,7 @@
     
 
     $sql="insert into transportadora(idCidade,transportadora,endereco,num,bairro,cep,cnpj,insc,contato,tel) values ('$cidade', '$nome', 
-          '$endereco', '$num', '$bairro', '$cep', '$contato', '$cnpj', '$insc', '$telefone')";
+          '$endereco', '$num', '$bairro', '$cep', '$cnpj', '$insc', '$contato', '$telefone')";
     if(mysql_query($sql)){
         echo "<script>alert('Cadastro Efetuado com Sucesso');</script>";
         echo "<script>window.location='cad_transportadora.php';</script>";        

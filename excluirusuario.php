@@ -14,7 +14,7 @@
 			include "conecta.php";
 			$cod_usuario=$_GET["cod_usuario"];
 
-			$apagar="delete from usuario where cod_usuario='$cod_usuario'";
+			$apagar="delete from usuario where idUsuario='$cod_usuario'";
 			if(mysql_query($apagar)){
 				echo"<script>alert('Usuário Excluido com Sucesso');</script>";
 				echo "<script>window.location ='pesquisausuario.php';</script>";
