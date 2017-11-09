@@ -3,16 +3,16 @@ form { max-width: 1200px; margin: 0 auto; padding: 3%; margin-top: 30px; clear: 
 
 
 #transportadora{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
-#datapedido{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
+#loja{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #dataentrada{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #frete{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #nota{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #imposto{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
-#totalpedido{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
+#valortotal{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #produto{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #lote{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 #quantidade{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
-#valortotal{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
+#total{ min-width: 100%; min-height: 30px; border-radius: 9px; border: 1px solid #777; padding: 10px; font-size: 11px; }
 
 
 

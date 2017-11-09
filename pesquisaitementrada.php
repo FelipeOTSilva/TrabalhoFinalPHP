@@ -74,13 +74,15 @@ table{
 include "menu.php";
 include "conecta.php";
 
+@session_start();
+
   ?>
 
     <div class="panel panel-success">
                         <div class="panel-heading">
                         <center>
                         <h4>
-                           Cidades Cadastradas no Sistema
+                           Pedidos cadastros sistema
                             </h4>
                             </center>
                         </div>
@@ -95,8 +97,13 @@ include "conecta.php";
                                 <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
                                     <thead>
                                    
-                                             <th>Cidade</th>                                 
-                                             <th>UF</th>
+                                             <th>Transportadora</th>                                 
+                                             <th>Data Pedido</th>
+                                             <th>Data de Entrada</th>
+                                             <th>Total</th>
+                                             <th>Frete</th>
+                                             <th>Número NF</th>
+                                             <th>Imposto</th>
                                              <th>Opção</th>
                                              
                                            
@@ -104,30 +111,51 @@ include "conecta.php";
                                     </thead>
                                     <tbody>
                                     <?php
-                                      	$sql = "select cidade.idCidade, cidade, estado.uf
-                                                  from cidade
-                                                  join estado on (cidade.idEstado = estado.idEstado)";
+                                      	$sql = "select entrada.idEntrada, transportadora.transportadora, dataped, dataentr, total,frete,numnf,imposto, itementrada.idItemEntrada
+                                                  from entrada
+                                                  join transportadora on (entrada.idTransportadora = transportadora.idTransportadora)
+                                                  join itementrada on (entrada.idEntrada = itementrada.idEntrada)";
 	
 	 $editar = mysql_query($sql);
      while ($l = mysql_fetch_array($editar)){	
-   $codigo = $l['idCidade'];  
-	$nome = $l['cidade'];
-    $estado = $l['uf'];
+   $codigo = $l['idEntrada'];  
+	$transportadora = $l['transportadora'];
+    $dataped = $l['dataped'];
+    $dataped = date("d/m/Y",strtotime($dataped));
+    $dataentr = $l['dataentr'];
+    $dataentr = date("d/m/Y",strtotime($dataentr));
+    $total = $l['total'];
+    $total = number_format($total,2,",",".");
+    $frete = $l['frete'];
+    $frete = number_format($frete,2,",",".");
+    $numnf = $l['numnf'];
+    $imposto = $l['imposto'];
+    $imposto = number_format($imposto,2,",",".");
+    $idItemEntrada = $l['idItemEntrada'];
+
+    
+
 	echo "
       
       <tr class=success>
-      <td> $nome </td> 
-      <td> $estado </td>
+      <td> $transportadora </td> 
+      <td> $dataped </td>
+      <td> $dataentr </td>
+      <td> $total </td>
+      <td> $frete </td>
+      <td> $numnf </td>
+      <td> $imposto </td>
     <center>  
-    <td align=center> <a href=editacidade.php?codigo=$codigo data-toggle=modal data-target=#myModal>
+    <td align=center> <a href=editaitementrada.php?codigo='$codigo'&itementrada='$idItemEntrada'; data-toggle=modal data-target=#myModal>
       <button type='button' class='btn btn-primary btn-xs'>Visualizar Cadastro</button> </td>  
+  
  </a> 
                               
       </tr>
  </a>                                   
       </tr>
       ";
-      }
+     }
                                       ?>
                                     </tbody>
                                 </table>

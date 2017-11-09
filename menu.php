@@ -98,10 +98,10 @@
                           <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Consulta<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-							    <li>
+							                  <li>
                                   <a href="pesquisacategoria.php"> Categoria</a>
                                 </li>
-								<li>
+								                 <li>
                                   <a href="pesquisacidade.php"> Cidade</a>
                                 </li>
                                 <li>
@@ -124,37 +124,27 @@
                                   <a href="pesquisausuario.php">Usuarios</a>
                                 </li> 
                                 <li>
-                                  <a href="pesquisaentrada.php">Entrada de Estoque</a>
+                                  <a href="pesquisaitementrada.php">Entrada de Estoque</a>
                                 </li> 
                                 <li>
-                                  <a href="pesquisasaida.php">Saída de Estoque</a>
+                                  <a href="pesquisaitemsaida.php">Saída de Estoque</a>
                                 </li>
                             </ul>
                         </li>
-                        
-                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Entradas<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                
-                                  <li>
-                                   <a href="entrada.php">Produtos</a>
-                                </li>
 
-                            </ul>
-                       
-                        </li>
-                        
-                         <li>
-                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Saida<span class="fa arrow"></span></a>
+                        <li>
+                            <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Pedidos<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
-                                 <li>
-                                   <a href="cad_saida.php">Produtos</a>
+							                  <li>
+                                  <a href="pedidos.php"> Pedido de entrada</a>
                                 </li>
-                                
+                                 <li>
+                                  <a href="pedidossaida.php"> Pedido de saída</a>
+                                </li>								                 
                             </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
-                        
+                         </li>    
+                                          
+                                               
                          <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Graficos <span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
