@@ -303,7 +303,7 @@ $sql = "SELECT entrada.identrada,
   
 							                   
 							                           	<input type="button"  id="botao"  class="btn btn-success" value="Editar" onclick="troca()">  
-							                           	<a href="<?php echo "excluiritementrada.php?codigo=$idEntradan&itementrada=$idItemEntrada&produto=$produto&quantidade=$quantidade";?>">
+							                           	<a href="<?php echo "excluiritementrada.php?codigo=$idEntradan&itementrada=$idItemEntrada&produto=$produto&quantidadeantiga=$quantidade";?>">
 							                            <input type="button"  id="excluir" class="btn btn-danger" value="Excluir" > 
 							                      </a>
 							                           	
